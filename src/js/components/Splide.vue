@@ -54,7 +54,7 @@
 	    this.splide.mount( this.extensions, this.transition );
     },
 
-    beforeDestroy() {
+    beforeUnmount() {
 			this.splide.destroy();
     },
 
@@ -62,9 +62,12 @@
 		  /**
 		   * If the slides prop is provided, watch it and remount Splide.
 		   */
-		  slides() {
-			  this.remount();
-		  },
+		  slides: {
+        handler() {
+          this.remount();
+        },
+        deep: true,
+      },
 	  },
 
     computed: {
@@ -121,8 +124,8 @@
 		  remount() {
       	this.$nextTick( () => {
 		      this.splide.destroy();
-		      this.splide.mount();
 		      this.bind();
+		      this.splide.mount();
         } );
       },
 	  },
