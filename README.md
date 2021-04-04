@@ -7,7 +7,7 @@
     </a>
 </p>
 
-# Vue Splide
+# Vue Splide with vue 3 support
 **Vue Splide is the [Splide](https://github.com/Splidejs/splide) component for [Vue](https://vuejs.org/).**
 * [Document](https://splidejs.com/integration-vue-splide/)
 * [Splide Demos](https://splidejs.com/)
