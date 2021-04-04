@@ -14,14 +14,33 @@
 * [Working Examples](https://splidejs.github.io/vue-splide/)
 
 ## Installation
-Get the latest version by NPM:
+Add remote package to your dependencies inside `package.json`
+```
+...
+"dependencies": {
+		...
+    "@splidejs/vue-splide": "github:bsalwiczek/vue3-splide",
+}
+```
+
+
+~~Get the latest version by NPM:~~
 ```bash
 $ npm install @splidejs/vue-splide
 ```
 
 ## Registration
 ### Global Registration
-Import `vue-splide` and install into Vue:
+Import `vue-splide` and install into Vue using vue3 syntax:
+```javascript
+import Vue from 'vue';
+import App from './App';
+import VueSplide from '@splidejs/vue-splide';
+
+const app = createApp(App).use(VueSplide).mount('#app');
+```
+
+~~Import `vue-splide` and install into Vue:~~
 ```javascript
 import Vue from 'vue';
 import App from './App';
